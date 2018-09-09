@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giphy Good Times</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gudea" rel="stylesheet">
+<body>
+ <h1 id="heading">Choose your own gif adventure</h1>
+    <div class="container">
+        <div  id="form">
+        <h1>Search for gifs</h1>
+            <form class="form" action="">
+                Your favorite hero:<br>
+                <input class="form" id="main-search" type="text" name="Your favorite hero"><br>
+                <br>
+                <br>
+                <input class="action-button form" id="search-button" style="width:75%; margin-top: 20px"type="submit" value="Search">
+            </form>
+        </div>
+        <div id="favorites" >
+            <h1>Favorites</h1>
+            <h3>You may drag and drop your favorite gifs here to save them or else use the attached button.</h3>
+                <div id="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)" >
+
+                </div>
+            
+        </div>
+        
+        <div id="buttons">
+            <h1>Press a button to see 10 gifs</h1>
+            <h3>Ditch any of your searches by double-clicking on the button.</h3>
+            <div class="button-home" id="button-home">
+
+            </div>
+            
+            
+        </div>
+        <div id="wrapper">
+        <header>
+        <h1>Here Goes...</h1>
+        <h3>To empty the display of gifs, press this <button class="action-button" id="empty-button" style="height: 50px" value="Clear">Clear out!</button>  button.</h3>
+         </header>   
+                <span id="display">
+
+                </span>
+           
+            
+        </div>
+       
+    </div>
+   
+    <script src="./giphy.js"></script>
+</body>
+</html>
+

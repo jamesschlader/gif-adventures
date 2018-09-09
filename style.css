@@ -1,0 +1,233 @@
+body {
+    box-sizing: border-box;
+   background-image: linear-gradient(blue, red);
+   color: white;
+   font-size: 1.4rem;
+   font-family: 'Gudea', sans-serif;
+}
+.form {
+    padding: 5px;
+    margin-top: 5px;
+    width: 85%;
+}
+
+.container {
+display: grid;
+grid-template-columns: 1fr 2fr;
+grid-template-rows: auto auto 1fr;
+grid-auto-flow: column;
+width: 1000px;
+margin: 0 auto;
+grid-gap: 10px;
+}
+
+#favorites {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    grid-auto-flow: column;
+    
+}
+
+#drop-zone {
+    
+    width: auto;
+    min-height: 100px;
+    height: auto;
+    
+    grid-auto-flow: column;
+}
+
+#form {
+grid-column: 1 / 2;
+grid-row: 1 / 2;
+}
+
+#buttons {
+grid-column: 2 / 3;
+grid-row: 1 / 2;
+}
+
+#wrapper {
+    grid-column: 1 / 3;
+    grid-row: 3 /4 ;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr auto;
+
+}
+
+#wrapper>header {
+    grid-column: 1 / 9;
+    grid-row: 1 / 2;
+
+}
+#display {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+grid-column: 1 / end;
+grid-row: 2 / 3;
+list-style-type: none;
+grid-auto-flow: column;
+display: inline-block;
+justify-self: stretch;
+}
+
+.action-button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    width: 20%;
+}
+
+.fav-button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.fav-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.fav-button:active {
+    background-color: #4CAF50;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.kill-button {
+    background-color: red; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.kill-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.kill-button:active {
+    background-color: #4CAF50;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.action-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.action-button:active {
+    background-color: #4CAF50;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .hero-card {
+    grid-auto-columns: auto;
+    display: inline-block;
+    align-content: center;
+    margin: 10px;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    box-shadow: 0px 3px 3px rgb(117, 114, 114);
+    transition: 3s;
+}
+
+.hero-text {
+    margin-bottom: 40px;
+    padding: 0 auto;
+    background-color: rgba(59, 57, 57, 0.267);
+    max-height: 100px;
+    min-width: 100%;
+    text-align: center;
+    justify-items: center;
+}
+
+.hero-text>p {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-text>.fav-button {
+    margin-bottom: 20px;
+}
+
+  .gifs {
+      box-sizing: border-box;
+      max-width: fit-content;
+      height: fit-content;
+      margin: 20px auto 0 auto;
+      border: solid 3px black;
+      vertical-align: top;
+  }
+
+  @media screen and (max-width: 768px) {
+      .container {
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-rows: repeat(4, auto);
+          grid-auto-flow: column;
+          width: auto;
+      }
+
+      #form {
+          grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+
+      #favorites {
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+          grid-auto-flow: column;
+      }
+
+      #buttons {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        grid-auto-flow: column;
+      }
+
+      #wrapper {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+      }
+
+      #display {
+        grid-auto-flow: column;
+      }
+
+      .action-button {
+          width: 40%;
+      }
+
+      .hero-card {
+          width: min-content;
+      }
+  }
